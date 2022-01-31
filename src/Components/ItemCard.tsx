@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardMedia } from "@mui/material";
+import { Card, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 import React from "react";
 
 type ItemCardProps = {
@@ -12,17 +12,24 @@ type ItemCardProps = {
 
 const ItemCard: React.FC<ItemCardProps> = ({ItemName, Image, Description, Price, MinMax}): JSX.Element => {
     return (
-      <Card sx={{maxWidth: 300}}>
-        <CardHeader
-          title={ItemName}
-        />
-        <CardMedia
-          component="img"
-          image={Image}
-          height={300}
-          width={400}
-        />
-      </Card>
+        <div>
+          <Card sx={{maxWidth: 300}}>
+          <CardHeader
+            title={ItemName}
+          />
+          <CardMedia
+            component="img"
+            image={Image}
+            height={300}
+            width={400}
+          />
+          <CardContent>
+            <Typography>
+              {Description}
+            </Typography>
+          </CardContent>
+        </Card>
+      </div>
     )
 }
 
