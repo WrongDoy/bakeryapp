@@ -2,6 +2,7 @@ import React from 'react';
 import ItemCard from './Components/ItemCard';
 import {JsonItems} from "./Others/items";
 import "./Css/App.css"
+import { AppBar } from '@mui/material';
 
 const App = () => {
   var itemArray = [...JsonItems];
@@ -17,6 +18,7 @@ const App = () => {
           MinMax={[bakeryItem.Min, bakeryItem.Max]}/>
         })
       }
+    <AppBar/>
     </main>
   )
 }
